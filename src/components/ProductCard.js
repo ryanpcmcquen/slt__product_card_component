@@ -13,7 +13,7 @@ export default class ProductCard extends Card {
 	}
 	render() {
 		let { addToCart, price } = this.props;
-		let badge = this.state.isInCart && "ADDED TO CART";
+		let badge = this.state.isInCart ? "ADDED TO CART" : null;
 
 		return (
 			<div>

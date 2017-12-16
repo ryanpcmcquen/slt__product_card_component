@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/slt-badge.css";
 
 export default class Card extends React.Component {
 	render() {
@@ -15,24 +16,14 @@ export default class Card extends React.Component {
 			<div className={wrapperClasses}>
 				{link ? (
 					<div>
-						{badge && (
-							<div>
-								<link rel="stylesheet" href="../slt-badge.css" />
-								<span className="slt-badge">{badge}</span>
-							</div>
-						)}
+						{badge && <span className="slt-badge">{badge}</span>}
 						<a className={linkClasses} href={link}>
 							<img className={imageClasses} alt={alt} src={image} />
 						</a>
 					</div>
 				) : (
 					<div>
-						{badge && (
-							<div>
-								<link rel="stylesheet" href="../slt-badge.css" />
-								<span className="slt-badge">{badge}</span>
-							</div>
-						)}
+						{badge && <span className="slt-badge">{badge}</span>}
 						<img className={imageClasses} alt={alt} src={image} />
 					</div>
 				)}
