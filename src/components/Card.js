@@ -2,7 +2,7 @@ import React from "react";
 
 export default class Card extends React.Component {
 	render() {
-		let { alt, linkClasses, imageClasses, image, link, sku } = this.props;
+		let { alt, badge, image, imageClasses, link, linkClasses, sku, wrapperClasses } = this.props;
 
 		if (!image && sku) {
 			image = `https://www.surlatable.com/images/customers/c1079/PRO-${sku}/PRO-${sku}_pdp/main_variation_Default_view_1_425x425.`;
@@ -12,13 +12,29 @@ export default class Card extends React.Component {
 		}
 
 		return (
-			<div>
+			<div className={wrapperClasses}>
 				{link ? (
-					<a className={linkClasses} href={link}>
-						<img className={imageClasses} alt={alt} src={image} />
-					</a>
+					<div>
+						{badge && (
+							<div>
+								<link rel="stylesheet" href="../slt-badge.css" />
+								<span className="slt-badge">{badge}</span>
+							</div>
+						)}
+						<a className={linkClasses} href={link}>
+							<img className={imageClasses} alt={alt} src={image} />
+						</a>
+					</div>
 				) : (
-					<img className={imageClasses} alt={alt} src={image} />
+					<div>
+						{badge && (
+							<div>
+								<link rel="stylesheet" href="../slt-badge.css" />
+								<span className="slt-badge">{badge}</span>
+							</div>
+						)}
+						<img className={imageClasses} alt={alt} src={image} />
+					</div>
 				)}
 			</div>
 		);
