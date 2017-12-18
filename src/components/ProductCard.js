@@ -1,15 +1,14 @@
 import React from "react";
 import Card from "./Card";
 
-export default class ProductCard extends Card {
+export default class ProductCard extends React.Component {
 	addedToCart = () => {
 		this.setState({ isInCart: true });
 	};
 	constructor(props) {
 		super(props);
-		this.state = {
-			isInCart: false
-		};
+
+		this.state = { isInCart: false };
 	}
 	render() {
 		let { addToCart, price } = this.props;
