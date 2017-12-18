@@ -26,7 +26,7 @@ export default class ProductCard extends React.Component {
 				{addToCart && (
 					<Button
 						text="ADD TO CART"
-						classes="btn-success add-to-cart"
+						classes="btn-primary add-to-cart"
 						onClick={this.addedToCart}
 					/>
 				)}
