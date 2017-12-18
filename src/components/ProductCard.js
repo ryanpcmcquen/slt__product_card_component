@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Button from "./Button";
 
 export default class ProductCard extends React.Component {
 	addedToCart = () => {
@@ -8,6 +9,10 @@ export default class ProductCard extends React.Component {
 	constructor(props) {
 		super(props);
 
+		// `.setState` is the only way you should set
+		// the state of a component, _unless_ you are
+		// in the constructor (since `.state` does not
+		// exist yet).
 		this.state = { isInCart: false };
 	}
 	render() {
@@ -19,9 +24,11 @@ export default class ProductCard extends React.Component {
 				<Card badge={badge} {...this.props} />
 				{price && <div>{price}</div>}
 				{addToCart && (
-					<a className="btn btn-success add-to-cart" onClick={this.addedToCart}>
-						ADD TO CART
-					</a>
+					<Button
+						text="ADD TO CART"
+						classes="btn-success add-to-cart"
+						onClick={this.addedToCart}
+					/>
 				)}
 			</div>
 		);

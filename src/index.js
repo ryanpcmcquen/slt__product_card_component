@@ -6,7 +6,12 @@ import Cart from "./components/Cart";
 const App = () => (
 	<div>
 		<Cart />
-		<ProductCard sku="3436474" alt="Instant Pot" addToCart price="$299.95" />
+		<ProductCard
+			sku="3436474"
+			alt="Instant Pot"
+			addToCart
+			price="$299.95"
+		/>
 		{/*
 		<ProductCard sku="3422086" alt="Teakhaus Edge Grain cutting board" />
 		*/}

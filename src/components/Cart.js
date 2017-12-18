@@ -8,7 +8,10 @@ export default class Cart extends React.Component {
 	render() {
 		return (
 			<div>
-				<i className="glyphicon glyphicon-shopping-cart" style={activeCartStyle} />
+				<i
+					className="glyphicon glyphicon-shopping-cart"
+					style={activeCartStyle}
+				/>(<span class="shopping-cart-count">0</span>)
 			</div>
 		);
 	}

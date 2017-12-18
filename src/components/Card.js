@@ -3,7 +3,16 @@ import "../styles/slt-badge.css";
 
 export default class Card extends React.Component {
 	render() {
-		let { alt, badge, image, imageClasses, link, linkClasses, sku, wrapperClasses } = this.props;
+		let {
+			alt,
+			badge,
+			image,
+			imageClasses,
+			link,
+			linkClasses,
+			sku,
+			wrapperClasses
+		} = this.props;
 
 		if (!image && sku) {
 			image = `https://www.surlatable.com/images/customers/c1079/PRO-${sku}/PRO-${sku}_pdp/main_variation_Default_view_1_425x425.`;
@@ -18,7 +27,11 @@ export default class Card extends React.Component {
 					<div>
 						{badge && <span className="slt-badge">{badge}</span>}
 						<a className={linkClasses} href={link}>
-							<img className={imageClasses} alt={alt} src={image} />
+							<img
+								className={imageClasses}
+								alt={alt}
+								src={image}
+							/>
 						</a>
 					</div>
 				) : (
