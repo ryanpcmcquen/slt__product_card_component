@@ -7,6 +7,7 @@ export default class ProductCard extends React.Component {
 		this.setState({ isInCart: true });
 	};
 	constructor(props) {
+		// Get properties/context (`this`) from parent.
 		super(props);
 
 		// `.setState` is the only way you should set
