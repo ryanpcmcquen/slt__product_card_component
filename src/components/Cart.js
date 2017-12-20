@@ -11,7 +11,8 @@ export default class Cart extends React.Component {
 				<i
 					className="glyphicon glyphicon-shopping-cart"
 					style={activeCartStyle}
-				/>(<span className="shopping-cart-count">0</span>)
+				/>
+				(<span className="shopping-cart-count">0</span>)
 			</div>
 		);
 	}
