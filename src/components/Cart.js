@@ -13,7 +13,9 @@ class Cart extends React.Component {
 					className="glyphicon glyphicon-shopping-cart"
 					style={aCart.length && activeCartStyle}
 				/>
-				<span className="shopping-cart-count">({aCart.length})</span>
+				<span className="shopping-cart-count">
+					({aCart.length || 0})
+				</span>
 			</div>
 		);
 	}
