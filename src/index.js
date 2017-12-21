@@ -19,6 +19,7 @@ const App = () => (
 			sku="3422086"
 			alt="Teakhaus Edge Grain cutting board"
 			price="$200.00"
+			addToCart
 		/>
 	</div>
 );

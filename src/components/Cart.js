@@ -20,7 +20,13 @@ class Cart extends React.Component {
 						activeCartStyle
 					}
 				/>
-				(<span className="shopping-cart-count">0</span>)
+				(<span className="shopping-cart-count">
+					{cartObj ? (
+						Object.keys(cartObj).map(item => cartObj[item])
+					) : (
+						0
+					)}
+				</span>)
 			</div>
 		);
 	}
