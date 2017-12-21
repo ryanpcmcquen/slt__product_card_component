@@ -6,12 +6,12 @@ const activeCartStyle = {
 
 class Cart extends React.Component {
 	render() {
-		let aCart = store.getState().cartReducer;
+		let aCart = store.getState().cartReducer.cart || [];
 		return (
 			<div>
 				<i
 					className="glyphicon glyphicon-shopping-cart"
-					style={aCart.length && activeCartStyle}
+					style={aCart.length ? activeCartStyle : null}
 				/>
 				<span className="shopping-cart-count">
 					({aCart.length || 0})

@@ -16,7 +16,6 @@ const App = () => (
 			price="$299.95"
 		/>
 		<br />
-
 		<ProductCard
 			sku="3422086"
 			alt="Teakhaus Edge Grain cutting board"
