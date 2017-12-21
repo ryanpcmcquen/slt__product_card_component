@@ -8,6 +8,7 @@ import store from "./store";
 const App = () => (
 	<div>
 		<Cart />
+		<br />
 		<ProductCard
 			sku="3436474"
 			alt="Instant Pot"
