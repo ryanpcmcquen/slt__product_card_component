@@ -1,10 +1,11 @@
 const cartReducer = (state = {}, action) => {
 	switch (action.type) {
 		case "ADD_TO_CART":
-			return (state.sku = state.quantity);
+			return {
+				[action.sku]: action.quantity
+			};
 		default:
-			return state;
+			return action;
 	}
-	console.log(state);
 };
 export default cartReducer;

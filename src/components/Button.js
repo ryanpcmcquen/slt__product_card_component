@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Button extends React.Component {
+class Button extends React.Component {
 	render() {
 		let { classes, href, text } = this.props;
 
@@ -19,3 +19,5 @@ export default class Button extends React.Component {
 		);
 	}
 }
+
+export default Button;

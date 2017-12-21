@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/slt-badge.css";
 
-export default class Card extends React.Component {
+class Card extends React.Component {
 	render() {
 		let {
 			alt,
@@ -44,3 +44,5 @@ export default class Card extends React.Component {
 		);
 	}
 }
+
+export default Card;

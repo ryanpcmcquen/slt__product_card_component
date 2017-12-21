@@ -6,16 +6,11 @@ import store from "../store";
 class ProductCard extends React.Component {
 	addedToCart = () => {
 		this.setState({ isInCart: true });
-		store.dispatch(
-			{
-				quantity: 1,
-				sku: this.props.sku,
-				type: "ADD_TO_CART"
-			},
-			{
-				type: "ADD_TO_CART"
-			}
-		);
+		store.dispatch({
+			quantity: 1,
+			sku: this.props.sku,
+			type: "ADD_TO_CART"
+		});
 	};
 	constructor(props) {
 		// Get properties/context (`this`) from parent.

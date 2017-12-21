@@ -14,9 +14,12 @@ const App = () => (
 			addToCart
 			price="$299.95"
 		/>
-		{/*
-		<ProductCard sku="3422086" alt="Teakhaus Edge Grain cutting board" />
-		*/}
+
+		<ProductCard
+			sku="3422086"
+			alt="Teakhaus Edge Grain cutting board"
+			price="$200.00"
+		/>
 	</div>
 );
 

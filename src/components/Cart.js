@@ -4,7 +4,7 @@ const activeCartStyle = {
 	color: "#E57D24"
 };
 
-export default class Cart extends React.Component {
+class Cart extends React.Component {
 	render() {
 		return (
 			<div>
@@ -17,3 +17,5 @@ export default class Cart extends React.Component {
 		);
 	}
 }
+
+export default Cart;
