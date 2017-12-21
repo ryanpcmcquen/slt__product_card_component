@@ -23,9 +23,14 @@ const App = () => (
 	</div>
 );
 
-ReactDOM.render(
-	<ReactRedux.Provider store={store}>
-		<App />
-	</ReactRedux.Provider>,
-	document.querySelector(".react-component-container")
-);
+const render = () => {
+	ReactDOM.render(
+		<ReactRedux.Provider store={store}>
+			<App {...store.getState()} />
+		</ReactRedux.Provider>,
+		document.querySelector(".react-component-container")
+	);
+};
+
+store.subscribe(render);
+render();
