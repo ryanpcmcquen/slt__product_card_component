@@ -14,6 +14,7 @@ const App = () => (
 			addToCart
 			price="$299.95"
 		/>
+		<br />
 
 		<ProductCard
 			sku="3422086"

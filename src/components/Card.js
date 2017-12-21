@@ -22,7 +22,7 @@ class Card extends React.Component {
 		}
 
 		return (
-			<div className={wrapperClasses}>
+			<div className={wrapperClasses} style={{ position: "relative" }}>
 				{link ? (
 					<div>
 						{badge && <span className="slt-badge">{badge}</span>}
