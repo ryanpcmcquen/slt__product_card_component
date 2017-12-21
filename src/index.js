@@ -1,12 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
+import * as ReactRedux from "react-redux";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
-import sltReducers from "./reducers/sltReducers";
-
-const store = createStore(sltReducers);
+import store from "./store";
 
 const App = () => (
 	<div>
@@ -24,8 +21,8 @@ const App = () => (
 );
 
 ReactDOM.render(
-	<Provider store={store}>
+	<ReactRedux.Provider store={store}>
 		<App />
-	</Provider>,
+	</ReactRedux.Provider>,
 	document.querySelector(".react-component-container")
 );

@@ -1,10 +1,21 @@
 import React from "react";
 import Card from "./Card";
 import Button from "./Button";
+import store from "../store";
 
-export default class ProductCard extends React.Component {
+class ProductCard extends React.Component {
 	addedToCart = () => {
 		this.setState({ isInCart: true });
+		store.dispatch(
+			{
+				quantity: 1,
+				sku: this.props.sku,
+				type: "ADD_TO_CART"
+			},
+			{
+				type: "ADD_TO_CART"
+			}
+		);
 	};
 	constructor(props) {
 		// Get properties/context (`this`) from parent.
@@ -35,3 +46,5 @@ export default class ProductCard extends React.Component {
 		);
 	}
 }
+
+export default ProductCard;
