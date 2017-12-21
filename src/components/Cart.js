@@ -6,27 +6,14 @@ const activeCartStyle = {
 
 class Cart extends React.Component {
 	render() {
-		let cartObj =
-			store.getState().cartReducer.type !== "@@INIT"
-				? store.getState().cartReducer
-				: null;
+		let aCart = store.getState().cartReducer;
 		return (
 			<div>
 				<i
 					className="glyphicon glyphicon-shopping-cart"
-					style={
-						cartObj &&
-						Object.keys(cartObj).length &&
-						activeCartStyle
-					}
+					style={aCart.length && activeCartStyle}
 				/>
-				(<span className="shopping-cart-count">
-					{cartObj ? (
-						Object.keys(cartObj).map(item => cartObj[item])
-					) : (
-						0
-					)}
-				</span>)
+				<span className="shopping-cart-count">({aCart.length})</span>
 			</div>
 		);
 	}
