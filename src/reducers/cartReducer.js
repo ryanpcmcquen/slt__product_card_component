@@ -1,7 +1,4 @@
-const cartReducer = (state = {}, action) => {
-	if (!Array.isArray(state.cart)) {
-		state.cart = [];
-	}
+const cartReducer = (state = { cart: [] }, action) => {
 	switch (action.type) {
 		case "ADD_TO_CART":
 			return {
