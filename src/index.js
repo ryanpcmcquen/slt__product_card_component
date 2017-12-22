@@ -3,12 +3,17 @@ import ReactDOM from "react-dom";
 import * as ReactRedux from "react-redux";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";
-import store from "./store";
+import sltStore from "./store/sltStore";
 
-const App = () => (
+const CartApp = () => (
 	<div>
 		<Cart />
 		<br />
+	</div>
+);
+
+const App = () => (
+	<div>
 		<ProductCard
 			sku="3436474"
 			alt="Instant Pot"
@@ -25,14 +30,26 @@ const App = () => (
 	</div>
 );
 
-const render = () => {
+const appRender = () => {
 	ReactDOM.render(
-		<ReactRedux.Provider store={store}>
-			<App {...store.getState()} />
+		<ReactRedux.Provider store={sltStore}>
+			<App {...sltStore.getState()} />
 		</ReactRedux.Provider>,
 		document.querySelector(".react-component-container")
 	);
 };
 
-store.subscribe(render);
-render();
+const cartRender = () => {
+	ReactDOM.render(
+		<ReactRedux.Provider store={sltStore}>
+			<CartApp {...sltStore.getState()} />
+		</ReactRedux.Provider>,
+		document.querySelector(".react-cart-container")
+	);
+};
+
+sltStore.subscribe(appRender);
+appRender();
+
+sltStore.subscribe(cartRender);
+cartRender();

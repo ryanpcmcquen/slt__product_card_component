@@ -1,12 +1,13 @@
 import React from "react";
-import store from "../store";
+import sltStore from "../store/sltStore";
+
 const activeCartStyle = {
 	color: "#E57D24"
 };
 
 class Cart extends React.Component {
 	render() {
-		let aCart = store.getState().cartReducer.cart || [];
+		let aCart = sltStore.getState().cartReducer.cart || [];
 		return (
 			<div>
 				<i

@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "./Card";
 import Button from "./Button";
-import store from "../store";
+import sltStore from "../store/sltStore";
 
 class ProductCard extends React.Component {
 	addedToCart = () => {
 		this.setState({ isInCart: true });
-		store.dispatch({
+		sltStore.dispatch({
 			quantity: 1,
 			sku: this.props.sku,
 			type: "ADD_TO_CART"
