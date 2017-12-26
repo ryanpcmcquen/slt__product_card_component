@@ -28,7 +28,11 @@ class ProductCard extends React.Component {
 
 		return (
 			<div>
-				<Card badge={badge} {...this.props} />
+				<Card
+					imageStyles={{ width: "250px" }}
+					badge={badge}
+					{...this.props}
+				/>
 				{price && <div>{price}</div>}
 				{addToCart && (
 					<Button

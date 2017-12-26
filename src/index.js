@@ -1,5 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// Because of the way the ReactRedux library
+// is set up, it requires a special type of
+// import to import the global object.
+// Using the global name allows us to
+// write code that is more portable to
+// a client-side only environment.
 import * as ReactRedux from "react-redux";
 import ProductCard from "./components/ProductCard";
 import Cart from "./components/Cart";

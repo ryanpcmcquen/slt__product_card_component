@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/slt-button.css";
 
 class Button extends React.Component {
 	render() {
@@ -6,13 +7,17 @@ class Button extends React.Component {
 
 		return href ? (
 			<div>
-				<a href={href} className={`btn ${classes}`} {...this.props}>
+				<a
+					href={href}
+					className={`btn slt-button ${classes}`}
+					{...this.props}
+				>
 					{text}
 				</a>
 			</div>
 		) : (
 			<div>
-				<a className={`btn ${classes}`} {...this.props}>
+				<a className={`btn slt-button ${classes}`} {...this.props}>
 					{text}
 				</a>
 			</div>

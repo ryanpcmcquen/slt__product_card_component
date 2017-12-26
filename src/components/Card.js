@@ -8,6 +8,7 @@ class Card extends React.Component {
 			badge,
 			image,
 			imageClasses,
+			imageStyles,
 			link,
 			linkClasses,
 			sku,
@@ -29,6 +30,7 @@ class Card extends React.Component {
 						<a className={linkClasses} href={link}>
 							<img
 								className={imageClasses}
+								style={imageStyles}
 								alt={alt}
 								src={image}
 							/>
@@ -37,7 +39,12 @@ class Card extends React.Component {
 				) : (
 					<div>
 						{badge && <span className="slt-badge">{badge}</span>}
-						<img className={imageClasses} alt={alt} src={image} />
+						<img
+							className={imageClasses}
+							style={imageStyles}
+							alt={alt}
+							src={image}
+						/>
 					</div>
 				)}
 			</div>
