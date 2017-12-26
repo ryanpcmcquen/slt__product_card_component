@@ -5,7 +5,10 @@ import sltStore from "../store/sltStore";
 
 class ProductCard extends React.Component {
 	addedToCart = () => {
+		// TODO:
+		// Rework this to use Redux rather than `setState`.
 		this.setState({ isInCart: true });
+
 		sltStore.dispatch({
 			quantity: 1,
 			sku: this.props.sku,
