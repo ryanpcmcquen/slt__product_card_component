@@ -6,6 +6,9 @@ import { addedToCart } from "../../actions/cartActions.js";
 
 const ProductCard = props => {
 	let { addToCart, price } = props;
+	// Determine 'on-the-fly' if the sku is inside
+	// of our cart object. This keeps us from having
+	// a needless boolean and wasting memory.
 	let isInCart = sltStore
 		.getState()
 		.cartReducer.cart.find(item => item.hasOwnProperty(props.sku));
