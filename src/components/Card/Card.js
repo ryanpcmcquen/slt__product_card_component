@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/slt-badge.css";
+import "./Badge.css";
 
 const Card = props => {
 	let {

@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "../components/Card";
-import Button from "../components/Button";
-import sltStore from "../store/sltStore";
-import { addedToCart } from "../actions/cartActions.js";
+import Card from "../../components/Card/Card";
+import Button from "../../components/Button/Button";
+import sltStore from "../../store/sltStore";
+import { addedToCart } from "../../actions/cartActions.js";
 
 const ProductCard = props => {
 	let { addToCart, price } = props;

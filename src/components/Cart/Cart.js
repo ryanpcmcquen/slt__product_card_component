@@ -1,5 +1,5 @@
 import React from "react";
-import sltStore from "../store/sltStore";
+import sltStore from "../../store/sltStore";
 
 const activeCartStyle = {
 	color: "#E57D24"

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/slt-button.css";
+import "./Button.css";
 
 const Button = props => {
 	let { classes, href, text } = props;
