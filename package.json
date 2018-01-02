@@ -1,7 +1,7 @@
 {
 	"name": "slt-product-card-component",
 	"description": null,
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"dependencies": {
 		"react-dom": "16.2.0",
 		"react": "16.2.0"
