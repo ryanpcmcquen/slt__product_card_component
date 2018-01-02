@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 // write code that is more portable to
 // a client-side only environment.
 import * as ReactRedux from "react-redux";
-import ProductCard from "./components/ProductCard";
+import ProductCard from "./containers/ProductCard";
 import Cart from "./components/Cart";
 import sltStore from "./store/sltStore";
 
