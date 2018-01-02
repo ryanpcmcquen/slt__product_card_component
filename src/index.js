@@ -21,17 +21,17 @@ const CartApp = () => (
 const App = () => (
 	<div>
 		<ProductCard
-			sku="3436474"
-			alt="Instant Pot"
 			addToCart
+			alt="Instant Pot"
 			price="$299.95"
+			sku="3436474"
 		/>
 		<br />
 		<ProductCard
-			sku="3422086"
+			addToCart
 			alt="Teakhaus Edge Grain cutting board"
 			price="$200.00"
-			addToCart
+			sku="3422086"
 		/>
 	</div>
 );
