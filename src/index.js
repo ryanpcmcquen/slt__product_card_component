@@ -8,7 +8,7 @@ import ReactDOM from "react-dom";
 // a client-side only environment.
 import * as ReactRedux from "react-redux";
 import ProductCard from "./containers/ProductCard/ProductCard";
-import Cart from "./components/Cart/Cart";
+import Cart from "./containers/Cart/Cart";
 import sltStore from "./store/sltStore";
 
 const CartApp = () => (
