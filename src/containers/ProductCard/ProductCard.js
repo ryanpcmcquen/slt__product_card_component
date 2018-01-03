@@ -1,17 +1,15 @@
 import React from "react";
 import Card from "../../components/Card/Card";
 import Button from "../../components/Button/Button";
-import PropTypes from "prop-types";
+import * as ReactRedux from "react-redux";
 import { addedToCart } from "../../actions/cartActions.js";
 
-const ProductCard = (props, context) => {
-	let { addToCart, price } = props;
+let ProductCard = (props, context) => {
+	let { addToCart, cart, price } = props;
 	// Determine 'on-the-fly' if the sku is inside
 	// of our cart object. This keeps us from having
 	// a needless boolean and wasting memory.
-	let isInCart = context.store
-		.getState()
-		.cartReducer.cart.find(item => item.hasOwnProperty(props.sku));
+	let isInCart = cart.find(item => item.hasOwnProperty(props.sku));
 	let badge = isInCart ? "ADDED TO CART" : null;
 
 	return (
@@ -28,9 +26,11 @@ const ProductCard = (props, context) => {
 		</div>
 	);
 };
-// This links the store to the context object.
-ProductCard.contextTypes = {
-	store: PropTypes
-};
+
+// This allows us to access the `state` object
+// as a property inside of the `ProductCard` container.
+ProductCard = ReactRedux.connect((state, ownProps) => {
+	return { cart: state.cartReducer.cart, ...ownProps };
+})(ProductCard);
 
 export default ProductCard;
