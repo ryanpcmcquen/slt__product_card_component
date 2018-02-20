@@ -6,14 +6,14 @@
 .slt-button:active,
 .slt-button:focus,
 .slt-button:focus:active {
-	background-color: #6d8b19 !important;
-	border-color: #6d8b19 !important;
+    background-color: #6d8b19 !important;
+    border-color: #6d8b19 !important;
 }
 
 .btn-primary:hover,
 .btn-primary:hover:active,
 .slt-button:hover,
 .slt-button:hover:active {
-	background-color: #657b28 !important;
-	border-color: #657b28 !important;
+    background-color: #657b28 !important;
+    border-color: #657b28 !important;
 }

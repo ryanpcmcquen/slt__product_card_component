@@ -3,7 +3,7 @@ import cartReducer from "./cartReducer";
 
 // This combines all reducers, so they can be modular:
 const sltReducers = Redux.combineReducers({
-	cartReducer
+    cartReducer
 });
 
 export default sltReducers;
