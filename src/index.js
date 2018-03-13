@@ -12,46 +12,39 @@ import Cart from "./containers/Cart/Cart";
 import sltStore from "./store/sltStore";
 
 const CartApp = () => (
-	<div>
-		<Cart />
-		<br />
-	</div>
+    <div>
+        <Cart />
+        <br />
+    </div>
 );
 
 const App = () => (
-	<div>
-		<ProductCard
-			addToCart
-			alt="Instant Pot"
-			price="$299.95"
-			sku="3436474"
-		/>
-		<br />
-		<ProductCard
-			addToCart
-			alt="Teakhaus Edge Grain cutting board"
-			price="$200.00"
-			sku="3422086"
-		/>
-	</div>
+    <div>
+        <ProductCard
+            addToCart
+            alt="Penguin guy"
+            price="$9,999,999.95"
+            sku="3507464"
+        />
+    </div>
 );
 
 const appRender = () => {
-	ReactDOM.render(
-		<ReactRedux.Provider store={sltStore}>
-			<App {...sltStore.getState()} />
-		</ReactRedux.Provider>,
-		document.querySelector(".react-component-container")
-	);
+    ReactDOM.render(
+        <ReactRedux.Provider store={sltStore}>
+            <App {...sltStore.getState()} />
+        </ReactRedux.Provider>,
+        document.querySelector(".react-component-container")
+    );
 };
 
 const cartRender = () => {
-	ReactDOM.render(
-		<ReactRedux.Provider store={sltStore}>
-			<CartApp {...sltStore.getState()} />
-		</ReactRedux.Provider>,
-		document.querySelector(".react-cart-container")
-	);
+    ReactDOM.render(
+        <ReactRedux.Provider store={sltStore}>
+            <CartApp {...sltStore.getState()} />
+        </ReactRedux.Provider>,
+        document.querySelector(".react-cart-container")
+    );
 };
 
 sltStore.subscribe(appRender);
